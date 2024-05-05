@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>New tab</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kalnia:wght@200&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/quill@2.0.1/dist/quill.snow.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div id="firstStartup">
+        <pre>
+            <h1>Hey it looks your first time here!</h1>
+            This is a replacement to the default new tab designed for Edge, but not exclusively for Edge.
+            This is written in Vanilla Javascript, making it really fast and all your data is on your device (it uses localstorage)
+            Before you start, you should setup some things: (you can change it later)
+        </pre>
+        <h2>Do you want to see weather content?</h2>
+        <pre>
+            Do you want to import your existing "icons" from your browser?
+            If you want to import icons, you can use <a href="">this script</a> (paste it into devtools)
+            The script is in Javascript and if you are concerned with the safety of it, just don't run it
+        </pre>
+        <label>Paste the output of the script here: </label>
+        <input type="text">
+        <button>Submit</button>
+        <pre>Note that you can <b>change your background</b> and <b>toggle the weather content</b> using the icons in the bottom right.</pre>
+        <pre>There is also a <b>widgets panel</b> where you can send requests to websites and add it to your new tab page!</pre>
+        <button id="doneWithTutorial">Skip/Done</button>
+    </div>
+    <img id="background"></img>
+    <canvas id="canvas"></canvas>
+    <a href="" id="credits">Credits</a>
+    <div id="weatherContentDiv">
+        <img src="./assets/cloudy.png">
+        <h3 id="weatherContent">Weather: </h3>
+    </div>
+    <div id="editShortcutPopup">
+        <button id="editShortcutPopupX" class="x">❌</button>
+        <label for="name">New name</label><br>
+        <input name="name">
+        <br>
+        <label for="url">New url</label><br>
+        <input name="url">
+        <br>
+        <button id="editShortcutPopupUpdate">Update</button>
+        <button id="editShortcutPopupDelete">Delete</button>
+    </div>
+    <div id="shortcuts">
+        <button id="addShortcut">+</button>
+    </div>
+    <div id="widgets">
+        <!-- Wakatime, calendar, etc integration -->
+        <div id="content">
+        
+        </div>
+    </div>
+    <div id="options">
+        <div>
+            <img src="./assets/cloudy.png">
+            <img id="toggleWeather" src="./assets/toggle-button.png">
+        </div>
+        <label for="bgFile" id="backgroundFileLabel"></label>
+        <input name="bgFile" type="file" id="backgroundFile">
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/quill@2.0.1/dist/quill.js"></script>
+    <script src="editor.js"></script>
+</body>
+
+</html>

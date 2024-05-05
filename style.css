@@ -1,0 +1,330 @@
+:root {
+    --button-height: 5ch;
+    --button-color: rgba(190, 84, 78, 0.792);
+    --button-color-hover: rgba(178, 35, 30, 0.783);
+    --button-color-clicked-hover: rgba(255, 0, 0, 0.135);
+    --button-border: solid rgba(54, 50, 75, 0.669) 2px;
+    --button-border-hover: solid rgba(162, 34, 143, 0.384) 2px;
+    --button-border-radius: 6px;
+    --button-font-size: 20px;
+}
+.x {
+    color: white;
+    font-size: var(--button-font-size);
+    background-color: var(--button-color);
+    border: var(--button-border);
+    transition: 0.5s;
+    border-radius: var(--button-border-radius);
+    cursor: pointer;
+    padding: 0.5ch;
+    text-align: center;
+    width: 4ch;
+    height: 4ch;
+    top: 10px;
+}
+
+.x:hover {
+    background-color: var(--button-color-hover);
+    border: var(--button-border-hover);
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+}
+
+#firstStartup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0.787);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    display: none;
+}
+
+#firstStartup pre {
+    font-family: "Montserrat", sans-serif;
+}
+
+#credits {
+    position: absolute;
+    left: 90vw;
+    top: 10px;
+    opacity: 0.5;
+}
+
+#weatherContentDiv {
+    position: absolute;
+    left: 1vw;
+    top: 1vh;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#weatherContentDiv img {
+    width: 32px;
+    height: 32px;
+}
+
+#shortcuts {
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#addShortcut {
+    background-color: rgba(55, 150, 179, 0.712);
+    border: none;
+    padding: 0.1ch;
+    border-radius: 30px;
+    color: white;
+    font-size: 3ch;
+    width: 40px;
+    height: 40px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+#addShortcut:hover {
+    background-color: rgb(37, 68, 90);
+}
+
+#editShortcutPopup {
+    display: none;
+    position: absolute;
+    background-color: #201e48;
+    padding: 2ch;
+    width: 35%;
+    height: 35%;
+    left: 35%;
+    top: 30%;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    flex-direction: column;
+}
+
+#editShortcutPopup button {
+    font-size: 1.2ch;
+    padding: 0.5vw;
+    border: none;
+    transition: 0.1s;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#editShortcutPopup input {
+    border-radius: 20px;
+    border: none;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    height: 4ch;
+}
+
+#editShortcutPopupUpdate {
+    background-color: rgb(46, 162, 114);
+}
+
+#editShortcutPopupUpdate:hover {
+    background-color: rgb(32, 91, 54);
+}
+
+#editShortcutPopupDelete {
+    background-color: rgb(255, 0, 0);
+}
+
+#editShortcutPopupDelete:hover {
+    background-color: rgb(101, 27, 27);
+}
+
+#editShortcutPopupX {
+    position: absolute;
+    left: 90%;
+}
+
+.icon {
+    position: relative;
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-color: rgb(112, 138, 161);
+    border-radius: 10px;
+    padding: 1px;
+    margin: 1vw;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.icon:hover {
+    opacity: 0.90;
+}
+
+.icon a {
+    font-size: 13px;
+    margin: 10px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.716);
+}
+
+.icon img {
+    width: 24px;
+    height: 24px;
+    /* padding-left: 30%; */
+    padding-top: 15%;
+    border-radius: 100px;
+}
+
+.icon .editShortcut {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 3px;
+    font-size: 18px;
+}
+
+.icon .editShortcut:hover {
+    background-color: rgba(255, 255, 255, 0.237);
+}
+
+#widgets {
+    position: relative;
+    top: 25vh;
+    left: 2vw;
+    background-color: rgba(99, 99, 99, 0.303);
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    width: 90vw;
+    height: 30vh;
+    opacity: 0.8;
+    transition: 0.1s;
+}
+
+#widgets:hover {
+    opacity: 1;
+}
+
+/* #widgets button {
+    background-color: rgb(28, 28, 28);
+    border-radius: 20px;
+    font-size: 3ch;
+    width: 4ch;
+    height: 4ch;
+    color: white;
+    border: solid rgba(149, 149, 149, 0.318) 6px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#widgets button:hover {
+    background-color: rgb(41, 41, 41);
+} */
+
+#options {
+    position: absolute;
+    left: 95vw;
+    top: 80vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+#options img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#options label {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#options div {
+    display: flex;
+}
+
+/* thanks AI */
+#backgroundFile {
+    display: none;
+}
+
+#backgroundFileLabel {
+    display: inline-block;
+    background-image: url('./assets/image.png');
+    background-size: cover;
+}
+
+#content {
+    border: solid black 2px;
+    border-style: dotted;
+    padding: 0.1vw;
+    overflow-y: auto;
+    background-color: white;
+    color: black;
+}
+
+.ql-editor>* {
+    font-size: 20px !important;
+    padding: 10px !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+}
+
+.ql-toolbar {
+    background-color: white;
+}
+
+.ql-snow {
+    .ql-picker {
+        &.ql-size {
+
+            .ql-picker-label,
+            .ql-picker-item {
+                &::before {
+                    content: attr(data-value) !important;
+                }
+            }
+        }
+    }
+}
+
+/* https://stackoverflow.com/users/5551593/andrew in https://stackoverflow.com/questions/38623716/how-to-add-custom-font-sizes-to-quilljs-editor */
+.ql-color .ql-picker-options [data-value=custom-color] {
+    background: none !important;
+    width: 100% !important;
+    height: 20px !important;
+    text-align: center;
+}
+
+/* https://stackoverflow.com/questions/43728080/how-to-add-font-types-on-quill-js-with-toolbar-options */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value]::before {
+    content: attr(data-value) !important;
+}
+
+.ql-color .ql-picker-options [data-value=custom-color]:before {
+    content: 'Custom Color';
+}
+
+.ql-color .ql-picker-options [data-value=custom-color]:hover {
+    border-color: transparent !important;
+}

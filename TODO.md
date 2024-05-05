@@ -1,0 +1,6 @@
+- add weather toggle
+- add widgets
+- fill in href for credits tag
+- new tab icon
+- ADD A LICENSE!!!!
+- script to add icons from edge/chrome to this site
